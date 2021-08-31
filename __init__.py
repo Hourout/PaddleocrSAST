@@ -21,6 +21,7 @@ __all__ = ['PaddleOCR', 'PPStructure', 'draw_ocr', 'draw_structure_result', 'sav
 
 import cv2
 import linora as la
+import numpy as np
 
 from ppocr.utils.utility import get_image_file_list
 from tools.infer.predict_det import TextDetector
@@ -73,6 +74,9 @@ class PaddleocrSAST():
         self.args = args
         self.args.det_model_dir = det_model_dir
         self.text_detector = TextDetector(self.args)
+        img = np.random.uniform(0, 255, [640, 640, 3]).astype(np.uint8)
+        for i in range(2):
+            res = self.text_detector(img)
         
     def predict(self, image_dir):
         image_file_list = get_image_file_list(image_dir)
