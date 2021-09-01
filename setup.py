@@ -16,9 +16,12 @@ from setuptools import setup
 from io import open
 from paddleocr import VERSION
 
-with open('requirements.txt', encoding="utf-8-sig") as f:
-    requirements = f.readlines()
-    requirements.append('tqdm')
+# with open('requirements.txt', encoding="utf-8-sig") as f:
+#     requirements = f.readlines()
+#     requirements.append('tqdm')
+    
+requirements = ['shapely', 'scikit-image==0.17.2', 'imgaug==0.4.0', 'pyclipper', 'lmdb', 'tqdm', 'numpy',
+                'visualdl', 'python-Levenshtein', 'opencv-contrib-python==4.4.0.46', 'lxml', 'premailer', 'openpyxl']
 
 
 def readme():
