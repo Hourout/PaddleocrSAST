@@ -13,10 +13,11 @@
 # limitations under the License.
 
 # import paddleocr
-from .paddleocr import *
+# from .paddleocr import *
 
 __version__ = paddleocr.VERSION
-__all__ = ['PaddleOCR', 'PPStructure', 'draw_ocr', 'draw_structure_result', 'save_structure_res','download_with_progressbar',
+__all__ = [
+#           'PaddleOCR', 'PPStructure', 'draw_ocr', 'draw_structure_result', 'save_structure_res','download_with_progressbar',
           'PaddleocrSAST']
 
 
